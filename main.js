@@ -61,7 +61,7 @@ function move_to_cart() {
     let actual_price = document.getElementById("actual_price").innerHTML;
     let order_quantity = parseInt(order_quan);
     let total_price = order_quantity * parseFloat(actual_price);
-    document.getElementById("total_price").innerHTML = `${total_price}`;
+    document.getElementById("total_price").innerHTML = `$${total_price}`;
     document.getElementById("order_quantity").innerText = order_quantity;
     document.getElementById("empity_cart_txt").style.display = "none";
     document.getElementById("order__page").style.display = "flex";
