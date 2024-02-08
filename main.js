@@ -68,7 +68,7 @@ function move_to_cart() {
     document.getElementById("added_text").style.display = "block";
     setTimeout(() => {
       //hyms7 al added_text b3d 2sec
-      document.getElementById("added_text").remove();
+      document.getElementById("added_text").style.display = "none";
     }, 2000);
   }
 }
