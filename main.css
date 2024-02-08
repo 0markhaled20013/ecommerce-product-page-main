@@ -201,9 +201,9 @@ header > div {
 .cart .cart_page {
   display: none; /* be al js hzbtha*/
   position: absolute;
-  left: -255px;
+  left: -230px;
   top: 165%;
-  width: 340px;
+  width: 320px;
   min-height: 200px;
   background: white;
   z-index: 2;
