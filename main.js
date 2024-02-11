@@ -15,6 +15,7 @@ close_SVG.addEventListener("click", show_side_Menu);
 let main_image = document.getElementById("main_image");
 let next_btn = document.getElementById("next_btn");
 let back_btn = document.getElementById("back_btn");
+
 next_btn.addEventListener("click", next_photo);
 back_btn.addEventListener("click", back_photo);
 let page_width = document.documentElement.clientWidth;
@@ -66,6 +67,7 @@ function move_to_cart() {
     document.getElementById("empity_cart_txt").style.display = "none";
     document.getElementById("order__page").style.display = "flex";
     document.getElementById("added_text").style.display = "block";
+    num.innerHTML = 0;
     setTimeout(() => {
       //hyms7 al added_text b3d 2sec
       document.getElementById("added_text").style.display = "none";
@@ -76,4 +78,29 @@ let delete_svg = document.getElementById("delete_svg");
 delete_svg.addEventListener("click", () => {
   document.getElementById("order__page").style.display = "none";
   document.getElementById("empity_cart_txt").style.display = "flex";
+});
+// light Box
+let next_btn2 = document.getElementById("next_btn2");
+let back_btn2 = document.getElementById("back_btn2");
+next_btn2.addEventListener("click", next_photo2);
+back_btn2.addEventListener("click", back_photo2);
+let main_image2 = document.getElementById("main_image2");
+let n2 = 1;
+function next_photo2() {
+  if (n2 + 1 < 5) {
+    n2++;
+    main_image2.src = `./images/image-product-${n2}.jpg`;
+  }
+}
+function back_photo2() {
+  if (n2 - 1 > 0) {
+    n2--;
+    main_image2.src = `./images/image-product-${n2}.jpg`;
+  }
+}
+document.getElementById("close2").addEventListener("click", () => {
+  document.getElementById("light_container").style.display = "none";
+});
+main_image.addEventListener("click", () => {
+  document.getElementById("light_container").style.display = "flex";
 });
