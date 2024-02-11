@@ -104,3 +104,11 @@ document.getElementById("close2").addEventListener("click", () => {
 main_image.addEventListener("click", () => {
   document.getElementById("light_container").style.display = "flex";
 });
+function change_photo2(x) {
+  main_image2.src = `./images/image-product-${x}.jpg`;
+  n2 = parseInt(x);
+}
+function change_photo(x) {
+  main_image.src = `./images/image-product-${x}.jpg`;
+  n = parseInt(x);
+}
