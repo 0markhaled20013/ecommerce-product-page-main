@@ -15,10 +15,11 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   position: relative;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 p {
   margin: 0;
@@ -107,6 +108,9 @@ header > div {
   position: absolute;
   width: 100%;
   top: 50%;
+}
+#main_image {
+  cursor: pointer;
 }
 .image .btns button {
   width: 50px;
@@ -201,7 +205,7 @@ header > div {
 .cart .cart_page {
   display: none; /* be al js hzbtha*/
   position: absolute;
-  left: -230px;
+  right: -100%;
   top: 165%;
   width: 320px;
   min-height: 200px;
@@ -260,6 +264,35 @@ header > div {
 }
 #added_text {
   display: none; /*js*/
+}
+.light_container {
+  display: none; /*hzbtha be js*/
+  z-index: 5;
+  position: absolute;
+  inset: 0 0 0 0;
+  background-color: #000000a3;
+  align-items: center; /*dol 34an lma a5leh flex be al js al7agat deh t4t8l 3leh */
+  justify-content: center;
+}
+.light_container .main_img {
+  width: 410px;
+  height: 410px;
+}
+.light_container .image {
+  height: auto;
+}
+.light_container .close {
+  text-align: end;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.light_container .small_images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 410px;
+  margin: 20px 0;
 }
 @media (min-width: 800px) {
   /*800px or more*/
@@ -340,10 +373,19 @@ header > div {
   }
 }
 @media (max-width: 800px) {
+  /* 0px to 800px */
   .list_bar {
     display: none;
   }
   .main_img img {
     max-height: 380px;
+  }
+  .light_container .main_img {
+    height: auto;
+    max-width: 100%;
+  }
+  .light_container .image {
+    width: 300px;
+    height: auto;
   }
 }
