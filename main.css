@@ -269,10 +269,11 @@ header > div {
   display: none; /*hzbtha be js*/
   z-index: 5;
   position: absolute;
-  inset: 0 0 0 0;
+  inset: 0 0 0 0;/* top right bottom left*/
   background-color: #000000a3;
   align-items: center; /*dol 34an lma a5leh flex be al js al7agat deh t4t8l 3leh */
   justify-content: center;
+  height: 100vh;
 }
 .light_container .main_img {
   width: 410px;
